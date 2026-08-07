@@ -3,4 +3,4 @@ faiss-cpu
 pandas
 numpy
 pypdf
-docx
+python-docx
