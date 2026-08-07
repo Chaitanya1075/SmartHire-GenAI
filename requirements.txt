@@ -4,4 +4,4 @@ pandas
 numpy
 pypdf
 python-docx
-loaddotenv
+dotenv
