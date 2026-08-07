@@ -1,0 +1,44 @@
+ENGINEERING - CAREER GUIDE
+
+## Mechanical Engineer
+Mechanical Engineers design, analyze, and test mechanical systems and
+products - anything from vehicle components to manufacturing equipment.
+Core skills: CAD software (SolidWorks, CATIA, AutoCAD), understanding of
+materials and manufacturing processes, simulation/analysis tools (ANSYS,
+FEA), and strong fundamentals in physics and thermodynamics.
+Common tools: CAD software, simulation/FEA tools, MATLAB/Simulink for
+modeling, and increasingly Python for data analysis and automation of
+engineering workflows.
+To grow: build a portfolio of real design projects (even personal/academic
+ones) that show the full process from concept to analysis to iteration.
+Learning to pair traditional mechanical design skills with basic
+programming/scripting (e.g. automating repetitive analysis tasks) is
+increasingly valuable and differentiates candidates in a competitive field.
+Certifications like FE (Fundamentals of Engineering) and later PE
+(Professional Engineer) matter more in some industries (civil-adjacent,
+regulated industries) than others.
+
+## Systems/Design Engineer
+Systems and Design Engineers focus on how individual components fit into
+a larger system - requirements definition, interface analysis, and
+ensuring subsystems work together correctly (common in automotive,
+aerospace, and complex product development).
+Core skills: requirements engineering, systems thinking, cross-functional
+communication (working with mechanical, electrical, and software teams),
+and documentation (architectural diagrams, requirement traceability).
+To grow: experience working across multiple engineering disciplines
+(not just one) is valuable here, since the role is fundamentally about
+integration. Building experience with formal requirements/verification
+processes (common in regulated industries like automotive or aerospace)
+helps significantly for more senior systems engineering roles.
+
+## Manufacturing/Process Engineer
+Manufacturing Engineers design and improve the processes used to
+produce products - focusing on efficiency, quality, and cost.
+Core skills: process design and optimization, quality tools (Six Sigma,
+DFMEA), understanding of manufacturing equipment/automation, and basic
+statistics for process control.
+To grow: a Six Sigma certification (Green Belt or higher) is highly
+valued in this field and demonstrates structured process-improvement
+skill. Hands-on plant floor experience, even early in a career, builds
+credibility that's hard to get purely from classroom knowledge.

@@ -1,0 +1,106 @@
+[
+  {
+    "source_file": "engineering.txt",
+    "text": "ENGINEERING - CAREER GUIDE\n\n## Mechanical Engineer\nMechanical Engineers design, analyze, and test mechanical systems and\nproducts - anything from vehicle components to manufacturing equipment.\nCore skills: CAD software (SolidWorks, CATIA, AutoCAD), understanding of\nmaterials and manufacturing processes, simulation/analysis tools (ANSYS,\nFEA), and strong fundamentals in physics and thermodynamics.\nCommon tools: CAD software, simulation/FEA tools, MATLAB/Simulink for\nmodeling, and increasingly Python for data analysis and automation of\nengineering workflows.\nTo grow: build a portfolio of real design projects (even personal/academic\nones) that show the full process from concept to analysis to iteration.\nLearning to pair traditional mechanical design skills with basic\nprogramming/scripting (e."
+  },
+  {
+    "source_file": "engineering.txt",
+    "text": "teration.\nLearning to pair traditional mechanical design skills with basic\nprogramming/scripting (e.g. automating repetitive analysis tasks) is\nincreasingly valuable and differentiates candidates in a competitive field.\nCertifications like FE (Fundamentals of Engineering) and later PE\n(Professional Engineer) matter more in some industries (civil-adjacent,\nregulated industries) than others.\n\n## Systems/Design Engineer\nSystems and Design Engineers focus on how individual components fit into\na larger system - requirements definition, interface analysis, and\nensuring subsystems work together correctly (common in automotive,\naerospace, and complex product development).\nCore skills: requirements engineering, systems thinking, cross-functional\ncommunication (working with mechanical, electrical, a"
+  },
+  {
+    "source_file": "engineering.txt",
+    "text": "ngineering, systems thinking, cross-functional\ncommunication (working with mechanical, electrical, and software teams),\nand documentation (architectural diagrams, requirement traceability).\nTo grow: experience working across multiple engineering disciplines\n(not just one) is valuable here, since the role is fundamentally about\nintegration. Building experience with formal requirements/verification\nprocesses (common in regulated industries like automotive or aerospace)\nhelps significantly for more senior systems engineering roles.\n\n## Manufacturing/Process Engineer\nManufacturing Engineers design and improve the processes used to\nproduce products - focusing on efficiency, quality, and cost.\nCore skills: process design and optimization, quality tools (Six Sigma,\nDFMEA), understanding of manufa"
+  },
+  {
+    "source_file": "engineering.txt",
+    "text": "e skills: process design and optimization, quality tools (Six Sigma,\nDFMEA), understanding of manufacturing equipment/automation, and basic\nstatistics for process control.\nTo grow: a Six Sigma certification (Green Belt or higher) is highly\nvalued in this field and demonstrates structured process-improvement\nskill. Hands-on plant floor experience, even early in a career, builds\ncredibility that's hard to get purely from classroom knowledge.\n"
+  },
+  {
+    "source_file": "finance.txt",
+    "text": "FINANCE - CAREER GUIDE\n\n## Financial Analyst\nFinancial Analysts evaluate financial data to guide business decisions - things\nlike budgeting, forecasting, and investment analysis.\nCore skills: strong Excel skills (financial modeling, pivot tables), understanding\nof financial statements (income statement, balance sheet, cash flow), and\nincreasingly, basic knowledge of a BI tool (Power BI, Tableau) or SQL for\npulling data directly.\nCommon tools: Excel, financial modeling templates, ERP systems (SAP, Oracle),\nand reporting/BI dashboards.\nTo grow: build strong Excel modeling skills first - this is the single most\nrequested skill for this role. Learning SQL and a BI tool sets you apart, since\nmany analysts still rely on manually exported spreadsheets. Certifications\nlike CFA (Chartered Financial"
+  },
+  {
+    "source_file": "finance.txt",
+    "text": " analysts still rely on manually exported spreadsheets. Certifications\nlike CFA (Chartered Financial Analyst) are valuable for more senior/investment\nfocused roles but are a long-term commitment, not needed for entry-level roles.\n\n## Accountant\nAccountants track and record an organization's financial transactions, ensure\ncompliance with regulations, and prepare financial statements and tax filings.\nCore skills: bookkeeping fundamentals, understanding of GAAP/accounting\nstandards, attention to detail, and comfort with accounting software.\nCommon tools: QuickBooks, Tally, SAP, Excel, and tax preparation software.\nTo grow: a professional certification (CPA in the US, CA in India, or\nequivalent) significantly increases career ceiling and salary. Early career,\nfocus on mastering one accounting "
+  },
+  {
+    "source_file": "finance.txt",
+    "text": " significantly increases career ceiling and salary. Early career,\nfocus on mastering one accounting software thoroughly and understanding the\nfull month-end/quarter-end close process, since that's core to almost every\naccounting job.\n\n## Investment Analyst\nInvestment Analysts research companies, markets, and securities to support\ninvestment decisions, often within an investment bank, asset management firm,\nor private equity fund.\nCore skills: financial modeling and valuation (DCF, comparable company\nanalysis), strong understanding of markets, and the ability to write clear\ninvestment research/recommendations.\nCommon tools: Excel (advanced modeling), Bloomberg Terminal, and increasingly\nPython for quantitative analysis.\nTo grow: this is a competitive, often networking-driven field. Build a\n"
+  },
+  {
+    "source_file": "finance.txt",
+    "text": "n for quantitative analysis.\nTo grow: this is a competitive, often networking-driven field. Build a\nportfolio of practice financial models, follow markets closely and be able\nto discuss investment theses, and target internships early since this field\nweighs relevant experience heavily.\n"
+  },
+  {
+    "source_file": "healthcare.txt",
+    "text": "HEALTHCARE - CAREER GUIDE\n\n## Registered Nurse / Clinical Staff\nRegistered Nurses and other clinical staff provide direct patient care -\nmonitoring patients, administering treatments/medications, and coordinating\nwith doctors and other care team members.\nCore skills: clinical knowledge relevant to the care setting, strong\nattention to detail (medication accuracy, documentation), communication\nwith patients and families, and the ability to stay calm under pressure.\nCommon requirements: a nursing license (RN licensure, which requires\ncompleting an accredited nursing program and passing a licensing exam),\nand often certifications specific to a specialty (e.g. critical care,\npediatrics).\nTo grow: specializing in a high-demand clinical area (ICU, ER, surgical)\noften increases both pay and oppor"
+  },
+  {
+    "source_file": "healthcare.txt",
+    "text": ": specializing in a high-demand clinical area (ICU, ER, surgical)\noften increases both pay and opportunities. Pursuing further education\n(e.g. Nurse Practitioner) opens up more autonomous clinical roles with\nhigher earning potential, though it requires additional schooling.\n\n## Healthcare Administrator\nHealthcare Administrators manage the business and operational side of\nhealthcare facilities - staffing, budgets, compliance, and coordinating\nbetween clinical staff and organizational leadership.\nCore skills: healthcare regulations/compliance knowledge (e.g. HIPAA),\nbudgeting and operations management, and the ability to communicate well\nwith both clinical staff and non-clinical leadership.\nCommon tools: healthcare management systems, scheduling software, and\nstandard budgeting/reporting too"
+  },
+  {
+    "source_file": "healthcare.txt",
+    "text": "mmon tools: healthcare management systems, scheduling software, and\nstandard budgeting/reporting tools.\nTo grow: a degree in Healthcare Administration or an MBA with a healthcare\nfocus helps for more senior roles. Building experience in a specific\nfunctional area first (e.g. billing/compliance, then operations) is a\ncommon path toward broader administrative leadership roles.\n"
+  },
+  {
+    "source_file": "hr.txt",
+    "text": "HUMAN RESOURCES - CAREER GUIDE\n\n## HR Generalist\nHR Generalists handle a broad mix of HR functions - onboarding, employee\nrelations, policy administration, benefits coordination, and often light\nrecruiting - especially in small-to-mid sized companies.\nCore skills: strong communication, knowledge of basic labor law/compliance,\nconflict resolution, and organizational skills to juggle many different\nemployee-facing tasks at once.\nCommon tools: HRIS systems (Workday, BambooHR, SAP SuccessFactors), payroll\nsoftware, and standard office tools.\nTo grow: HR Generalist is often a stepping stone toward either HR Management\n(people leadership) or a specialized track (recruiting, compensation &\nbenefits, L&D). Building visible expertise in one area (e.g. becoming the\ngo-to person for onboarding or ben"
+  },
+  {
+    "source_file": "hr.txt",
+    "text": ", L&D). Building visible expertise in one area (e.g. becoming the\ngo-to person for onboarding or benefits) helps with a specialization move.\nAn HR certification (SHRM-CP or similar) helps credibility, especially for\nthose without a formal HR degree.\n\n## Recruiter\nRecruiters source, screen, and manage the hiring pipeline for open roles,\nworking closely with hiring managers to fill positions.\nCore skills: sourcing techniques (LinkedIn, job boards, referrals), strong\ninterviewing/screening ability, negotiation (especially for offers), and\nthe ability to manage many candidates/roles simultaneously without dropping\nthe ball.\nCommon tools: Applicant Tracking Systems (ATS) like Greenhouse or Lever,\nLinkedIn Recruiter, and scheduling tools.\nTo grow: specializing (technical recruiting, executive se"
+  },
+  {
+    "source_file": "hr.txt",
+    "text": "\nLinkedIn Recruiter, and scheduling tools.\nTo grow: specializing (technical recruiting, executive search, campus\nrecruiting) often leads to higher pay and more interesting work than staying\ngeneralist. Building a strong network and reputation for placing good\ncandidates matters more here than almost any certification.\n\n## HR Manager\nHR Managers oversee HR strategy and a team of HR staff, often owning\npolicy decisions, performance management systems, and being a key partner\nto senior leadership on people matters.\nCore skills: people leadership, strategic thinking (aligning HR practices\nto business goals), deep knowledge of employment law/compliance, and\nstrong stakeholder management with leadership.\nTo grow: this role typically requires several years of HR Generalist or\nspecialist experienc"
+  },
+  {
+    "source_file": "hr.txt",
+    "text": "ership.\nTo grow: this role typically requires several years of HR Generalist or\nspecialist experience first. Building experience managing a team, leading\na policy or culture initiative, and developing comfort discussing HR\nmetrics/ROI with leadership all help make this transition.\n"
+  },
+  {
+    "source_file": "information_technology.txt",
+    "text": "INFORMATION TECHNOLOGY - CAREER GUIDE\n\n## Software Engineer\nSoftware Engineers design, build, and maintain software applications and systems.\nCore skills: at least one programming language (Python, Java, C++, JavaScript),\ndata structures and algorithms, version control (Git), understanding of software\ndevelopment lifecycle (SDLC), and familiarity with testing practices.\nCommon tools: Git/GitHub, an IDE (VS Code, IntelliJ), cloud platforms (AWS/Azure/GCP),\nand increasingly, basic familiarity with CI/CD pipelines.\nTo grow: build small personal projects and put them on GitHub, contribute to open\nsource, learn one framework deeply (e.g. React for web, or a backend framework)\nrather than many frameworks shallowly. For entry-level roles, focus on strong\nfundamentals (data structures, algorithms)"
+  },
+  {
+    "source_file": "information_technology.txt",
+    "text": "meworks shallowly. For entry-level roles, focus on strong\nfundamentals (data structures, algorithms) since many interviews test this directly.\nTo transition into this role from a non-software background (e.g. IT support,\nsystems administration): highlight any scripting/automation work you've already\ndone, take a structured course in one language, and build 2-3 small projects that\ndemonstrate you can write and ship working code.\n\n## Systems Administrator\nSystems Administrators manage an organization's servers, networks, and IT\ninfrastructure - keeping systems running, secure, and up to date.\nCore skills: operating systems (Windows Server, Linux/Red Hat), Active Directory,\nnetworking fundamentals, backup and disaster recovery, and security basics\n(patching, firewalls, access control).\nCommon"
+  },
+  {
+    "source_file": "information_technology.txt",
+    "text": "als, backup and disaster recovery, and security basics\n(patching, firewalls, access control).\nCommon tools: Active Directory, VMware/virtualization tools, monitoring tools\n(Nagios, SolarWinds), scripting (PowerShell or Bash) for automating routine tasks.\nTo grow: learn scripting to automate repetitive admin tasks (this is a common\npath from \"hands-on admin\" to \"IT automation/DevOps\"), pursue certifications\n(CompTIA Server+, Microsoft certifications, RHCSA for Linux), and gain exposure\nto cloud infrastructure since many companies are moving away from fully\non-premise setups.\n\n## IT Support / Helpdesk\nIT Support staff handle day-to-day technical issues for employees - password\nresets, hardware troubleshooting, software installs, and basic network issues.\nCore skills: patience and clear commu"
+  },
+  {
+    "source_file": "information_technology.txt",
+    "text": " troubleshooting, software installs, and basic network issues.\nCore skills: patience and clear communication (you're explaining technical\nthings to non-technical people), basic troubleshooting methodology, ticketing\nsystems, and a working knowledge of common operating systems and office software.\nTo grow: this is often an entry point into IT. Moving toward Systems\nAdministration means picking up server management and networking; moving\ntoward Software Engineering means learning to code; moving toward\nCybersecurity means learning security fundamentals and pursuing a\ncertification like Security+.\n"
+  },
+  {
+    "source_file": "marketing_digital_media.txt",
+    "text": "MARKETING & DIGITAL MEDIA - CAREER GUIDE\n\n## Marketing Coordinator / Manager\nMarketing Coordinators and Managers plan and execute campaigns to promote\na company's products, services, or brand - across channels like social\nmedia, email, content, and paid advertising.\nCore skills: campaign planning, content creation/copywriting, basic\nanalytics (understanding what's working and why), and familiarity with\nmarketing platforms.\nCommon tools: social media platforms and schedulers (Hootsuite, Buffer),\nemail marketing tools (Mailchimp, HubSpot), Google Analytics, and design\ntools (Canva, or Adobe Creative Suite for more design-heavy roles).\nTo grow: build a portfolio of real campaigns you've run, even small ones,\nand be able to talk about actual results (engagement, leads generated,\ngrowth numbers"
+  },
+  {
+    "source_file": "marketing_digital_media.txt",
+    "text": "en small ones,\nand be able to talk about actual results (engagement, leads generated,\ngrowth numbers) - this is a field where a portfolio matters more than\nalmost any other credential. Learning basic data analysis (Google\nAnalytics, or even just Excel) sets marketers apart, since so much of\nmodern marketing is data-informed.\n\n## Digital Media Specialist\nDigital Media Specialists focus specifically on digital channels - social\nmedia, video content, website content, and online advertising - creating\nand managing a brand's digital presence.\nCore skills: content creation (video, graphics, or writing depending on\nspecialization), platform-specific knowledge (what works on Instagram vs\nLinkedIn vs YouTube), and basic performance tracking.\nCommon tools: video/photo editing tools (Adobe Premiere, "
+  },
+  {
+    "source_file": "marketing_digital_media.txt",
+    "text": " YouTube), and basic performance tracking.\nCommon tools: video/photo editing tools (Adobe Premiere, Photoshop,\nCanva), social media management platforms, and analytics dashboards for\neach platform.\nTo grow: specializing in one content format (video editing, short-form\ncontent, or a specific platform) and building a visible portfolio (a\npersonal Instagram/YouTube/portfolio site showing real work) is often\nmore valuable early on than a broad but shallow skill set. Staying\ncurrent with platform algorithm/format changes is a constant, ongoing\npart of this career.\n\n## Public Relations / Communications\nPR and Communications professionals manage how an organization is\nperceived publicly - media relations, press releases, crisis\ncommunication, and often internal communications too.\nCore skills: st"
+  },
+  {
+    "source_file": "marketing_digital_media.txt",
+    "text": "ations, press releases, crisis\ncommunication, and often internal communications too.\nCore skills: strong writing (press releases, statements, talking points),\nrelationship-building with media contacts, and calm, clear judgment\nunder pressure (especially for crisis communications).\nTo grow: building real media relationships and a portfolio of coverage\nyou've helped secure is the strongest signal in this field. Internships\nat agencies or in-house PR teams are a common and valuable entry point,\nsince so much of the job depends on trust and existing relationships\nthat take time to build.\n"
+  },
+  {
+    "source_file": "sales.txt",
+    "text": "SALES - CAREER GUIDE\n\n## Sales Representative\nSales Representatives (often called Sales Development Reps or Account\nExecutives depending on the stage of the sales cycle they own) generate\nleads, pitch products/services, and close deals with customers.\nCore skills: communication and persuasion, resilience (handling rejection),\nactive listening to understand customer needs, and basic pipeline/CRM\nmanagement.\nCommon tools: CRM software (Salesforce, HubSpot), email/outreach tools,\nand increasingly LinkedIn Sales Navigator for prospecting.\nTo grow: track and be able to talk about your numbers (quota attainment,\ndeals closed, pipeline generated) since sales is one of the most metrics-\ndriven career paths. Moving from an entry Sales Development Rep role to a\nfull Account Executive role usually re"
+  },
+  {
+    "source_file": "sales.txt",
+    "text": "r paths. Moving from an entry Sales Development Rep role to a\nfull Account Executive role usually requires demonstrating strong lead\nqualification and a track record of hitting targets.\n\n## Account Executive\nAccount Executives own the full sales cycle for a set of accounts/prospects -\nfrom qualifying interest through negotiating and closing the deal, and often\nmanaging the ongoing client relationship afterward.\nCore skills: consultative selling (understanding a client's business problem,\nnot just pitching features), negotiation, deal strategy, and relationship\nmanagement for renewals/upsells.\nCommon tools: CRM (Salesforce), proposal/quoting tools, and video conferencing\nfor demos.\nTo grow: build expertise in the specific industry/product you sell in - deep\ndomain knowledge (e.g. understand"
+  },
+  {
+    "source_file": "sales.txt",
+    "text": "uild expertise in the specific industry/product you sell in - deep\ndomain knowledge (e.g. understanding a client's business model) differentiates\ntop performers. Developing account planning skills and moving toward larger,\nmore strategic accounts is a common growth path toward Senior AE or Sales\nManager roles.\n"
+  }
+]

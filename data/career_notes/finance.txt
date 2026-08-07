@@ -1,0 +1,42 @@
+FINANCE - CAREER GUIDE
+
+## Financial Analyst
+Financial Analysts evaluate financial data to guide business decisions - things
+like budgeting, forecasting, and investment analysis.
+Core skills: strong Excel skills (financial modeling, pivot tables), understanding
+of financial statements (income statement, balance sheet, cash flow), and
+increasingly, basic knowledge of a BI tool (Power BI, Tableau) or SQL for
+pulling data directly.
+Common tools: Excel, financial modeling templates, ERP systems (SAP, Oracle),
+and reporting/BI dashboards.
+To grow: build strong Excel modeling skills first - this is the single most
+requested skill for this role. Learning SQL and a BI tool sets you apart, since
+many analysts still rely on manually exported spreadsheets. Certifications
+like CFA (Chartered Financial Analyst) are valuable for more senior/investment
+focused roles but are a long-term commitment, not needed for entry-level roles.
+
+## Accountant
+Accountants track and record an organization's financial transactions, ensure
+compliance with regulations, and prepare financial statements and tax filings.
+Core skills: bookkeeping fundamentals, understanding of GAAP/accounting
+standards, attention to detail, and comfort with accounting software.
+Common tools: QuickBooks, Tally, SAP, Excel, and tax preparation software.
+To grow: a professional certification (CPA in the US, CA in India, or
+equivalent) significantly increases career ceiling and salary. Early career,
+focus on mastering one accounting software thoroughly and understanding the
+full month-end/quarter-end close process, since that's core to almost every
+accounting job.
+
+## Investment Analyst
+Investment Analysts research companies, markets, and securities to support
+investment decisions, often within an investment bank, asset management firm,
+or private equity fund.
+Core skills: financial modeling and valuation (DCF, comparable company
+analysis), strong understanding of markets, and the ability to write clear
+investment research/recommendations.
+Common tools: Excel (advanced modeling), Bloomberg Terminal, and increasingly
+Python for quantitative analysis.
+To grow: this is a competitive, often networking-driven field. Build a
+portfolio of practice financial models, follow markets closely and be able
+to discuss investment theses, and target internships early since this field
+weighs relevant experience heavily.

@@ -1,0 +1,8 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+temp_*
+.idea/
+data/jobs/*.csv

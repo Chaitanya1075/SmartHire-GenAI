@@ -1,0 +1,43 @@
+INFORMATION TECHNOLOGY - CAREER GUIDE
+
+## Software Engineer
+Software Engineers design, build, and maintain software applications and systems.
+Core skills: at least one programming language (Python, Java, C++, JavaScript),
+data structures and algorithms, version control (Git), understanding of software
+development lifecycle (SDLC), and familiarity with testing practices.
+Common tools: Git/GitHub, an IDE (VS Code, IntelliJ), cloud platforms (AWS/Azure/GCP),
+and increasingly, basic familiarity with CI/CD pipelines.
+To grow: build small personal projects and put them on GitHub, contribute to open
+source, learn one framework deeply (e.g. React for web, or a backend framework)
+rather than many frameworks shallowly. For entry-level roles, focus on strong
+fundamentals (data structures, algorithms) since many interviews test this directly.
+To transition into this role from a non-software background (e.g. IT support,
+systems administration): highlight any scripting/automation work you've already
+done, take a structured course in one language, and build 2-3 small projects that
+demonstrate you can write and ship working code.
+
+## Systems Administrator
+Systems Administrators manage an organization's servers, networks, and IT
+infrastructure - keeping systems running, secure, and up to date.
+Core skills: operating systems (Windows Server, Linux/Red Hat), Active Directory,
+networking fundamentals, backup and disaster recovery, and security basics
+(patching, firewalls, access control).
+Common tools: Active Directory, VMware/virtualization tools, monitoring tools
+(Nagios, SolarWinds), scripting (PowerShell or Bash) for automating routine tasks.
+To grow: learn scripting to automate repetitive admin tasks (this is a common
+path from "hands-on admin" to "IT automation/DevOps"), pursue certifications
+(CompTIA Server+, Microsoft certifications, RHCSA for Linux), and gain exposure
+to cloud infrastructure since many companies are moving away from fully
+on-premise setups.
+
+## IT Support / Helpdesk
+IT Support staff handle day-to-day technical issues for employees - password
+resets, hardware troubleshooting, software installs, and basic network issues.
+Core skills: patience and clear communication (you're explaining technical
+things to non-technical people), basic troubleshooting methodology, ticketing
+systems, and a working knowledge of common operating systems and office software.
+To grow: this is often an entry point into IT. Moving toward Systems
+Administration means picking up server management and networking; moving
+toward Software Engineering means learning to code; moving toward
+Cybersecurity means learning security fundamentals and pursuing a
+certification like Security+.
