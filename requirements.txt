@@ -5,3 +5,5 @@ numpy
 pypdf
 python-docx
 dotenv
+langchain-core
+langchain-google-genai

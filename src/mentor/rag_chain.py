@@ -1,28 +1,27 @@
 """
-rag_mentor.py
+rag_chain.py
 
-Job of this file: the AI Career Mentor chatbot.
-1. Take the user's career question
-2. Embed the question
-3. Search career_notes.index for the most relevant chunks (retrieval)
-4. Give those chunks + the question to Gemini, and ask it to answer ONLY
-   using that retrieved information (generation) - this combo is "RAG":
-   Retrieval-Augmented Generation
-5. If the notes don't contain the answer, the mentor should say so instead
-   of making something up
+AI Career Mentor - RAG pipeline.
+
+Retrieval: custom FAISS search over BOTH the career_notes index and the
+jobs index, so the mentor is grounded in the job corpus AND career notes.
+
+Generation: orchestrated with LangChain - a ChatPromptTemplate composed
+with a Gemini chat model via LCEL (the `prompt | llm` pattern), instead of
+calling the Gemini API directly.
 """
 
 import os
 import json
 import numpy as np
 import faiss
-import google.generativeai as genai
-import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
-from src.safety.guardrails import validate_question
-
 from dotenv import load_dotenv
+import google.generativeai as genai  # used only for embeddings here
+
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_google_genai import ChatGoogleGenerativeAI
+
 load_dotenv()
 using_api_key = os.environ.get("GEMINI_API_KEY")
 genai.configure(api_key=using_api_key)
@@ -31,14 +30,17 @@ EMBEDDING_MODEL = "models/gemini-embedding-001"
 CHAT_MODEL = "gemini-3.5-flash-lite"
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-INDEX_PATH = str(BASE_DIR / "vectorstore" / "career_notes.index")
-METADATA_PATH = str(BASE_DIR / "vectorstore" / "career_notes_metadata.json")
+NOTES_INDEX_PATH = str(BASE_DIR / "vectorstore" / "career_notes.index")
+NOTES_METADATA_PATH = str(BASE_DIR / "vectorstore" / "career_notes_metadata.json")
+JOBS_INDEX_PATH = str(BASE_DIR / "vectorstore" / "jobs.index")
+JOBS_METADATA_PATH = str(BASE_DIR / "vectorstore" / "jobs_metadata.json")
 
-TOP_K_CHUNKS = 3  # how many relevant chunks to retrieve per question
+TOP_K_NOTES = 3
+TOP_K_JOBS = 2
 
 MENTOR_SYSTEM_PROMPT = """You are an AI Career Mentor. You answer career-related
-questions ONLY using the context provided below, which comes from a set of
-career guide documents.
+questions ONLY using the context provided below, which comes from two sources:
+career guide documents AND real job postings.
 
 Rules:
 - Base your answer only on the context given. Do not use outside knowledge.
@@ -46,7 +48,8 @@ Rules:
   say clearly: "I don't have enough information in my career notes to answer
   that." Do not guess or make something up.
 - Keep answers clear and practical, a few short paragraphs at most.
-"""
+- If a job posting is relevant to the question, you may mention it by title
+  and company as a concrete example."""
 
 
 def embed_query(text):
@@ -59,57 +62,97 @@ def embed_query(text):
     return result["embedding"]
 
 
-def retrieve_relevant_chunks(question, top_k=TOP_K_CHUNKS):
-    """
-    Search career_notes.index for the chunks most relevant to the question.
-    Returns a list of chunk dictionaries (source_file + text).
-    """
-    index = faiss.read_index(INDEX_PATH)
-    with open(METADATA_PATH, "r") as f:
+def retrieve_note_chunks(question, top_k=TOP_K_NOTES):
+    """Search career_notes.index for the most relevant chunks."""
+    index = faiss.read_index(NOTES_INDEX_PATH)
+    with open(NOTES_METADATA_PATH, "r") as f:
         metadata = json.load(f)
-
-    query_vector = embed_query(question)
-    query_vector = np.array([query_vector]).astype("float32")
-
-    distances, positions = index.search(query_vector, top_k)
-
-    results = []
-    for position in positions[0]:
-        results.append(metadata[position])
-    return results
+    query_vector = np.array([embed_query(question)]).astype("float32")
+    _, positions = index.search(query_vector, top_k)
+    return [metadata[p] for p in positions[0]]
 
 
-def build_context_text(chunks):
-    """Combine the retrieved chunks into one text block to give to the LLM."""
-    context_parts = []
-    for chunk in chunks:
-        context_parts.append(f"[From {chunk['source_file']}]\n{chunk['text']}")
-    return "\n\n---\n\n".join(context_parts)
+def retrieve_job_chunks(question, top_k=TOP_K_JOBS):
+    """Search jobs.index for the most relevant job postings."""
+    index = faiss.read_index(JOBS_INDEX_PATH)
+    with open(JOBS_METADATA_PATH, "r") as f:
+        metadata = json.load(f)
+    query_vector = np.array([embed_query(question)]).astype("float32")
+    _, positions = index.search(query_vector, top_k)
+    return [metadata[p] for p in positions[0]]
+
+
+def build_context_text(note_chunks, job_chunks):
+    """Combine career-note chunks AND job posting chunks into one context block."""
+    parts = []
+    for chunk in note_chunks:
+        parts.append(f"[Career Note: {chunk['source_file']}]\n{chunk['text']}")
+    for job in job_chunks:
+        parts.append(
+            f"[Job Posting: {job['title']} at {job.get('company_name', 'Unknown')}]\n"
+            f"{job.get('description', '')[:400]}"
+        )
+    return "\n\n---\n\n".join(parts)
+
+
+# ---- LangChain orchestration ----
+# A ChatPromptTemplate composed with the Gemini chat model via LCEL.
+# This is the "orchestrated with LangChain" piece: instead of calling
+# genai.GenerativeModel(...).generate_content(...) directly, generation now
+# flows through a LangChain Runnable chain.
+llm = ChatGoogleGenerativeAI(
+    model=CHAT_MODEL,
+    google_api_key=using_api_key,
+    temperature=0.3
+)
+
+prompt_template = ChatPromptTemplate.from_messages([
+    ("system", MENTOR_SYSTEM_PROMPT),
+    ("human", "CONTEXT:\n{context}\n\nQUESTION: {question}")
+])
+
+mentor_chain = prompt_template | llm
 
 
 def ask_mentor(question):
     """
     Main function to use.
-    Retrieves relevant career-notes chunks, then asks Gemini to answer the
-    question using only that retrieved context.
+    Retrieves relevant chunks from BOTH career notes and job postings,
+    then runs them through the LangChain-orchestrated generation chain.
+    Returns (answer_text, list_of_source_chunks).
     """
-    chunks = retrieve_relevant_chunks(question)
-    context_text = build_context_text(chunks)
+    note_chunks = retrieve_note_chunks(question)
+    job_chunks = retrieve_job_chunks(question)
+    context_text = build_context_text(note_chunks, job_chunks)
 
-    model = genai.GenerativeModel(
-        model_name=CHAT_MODEL,
-        system_instruction=MENTOR_SYSTEM_PROMPT,
-        generation_config={'temperature': 0.3}
-    )
+    response = mentor_chain.invoke({"context": context_text, "question": question})
 
-    prompt = f"CONTEXT:\n{context_text}\n\nQUESTION: {question}"
-    response = model.generate_content(prompt)
+    # response.content is usually a string, but LangChain's Gemini wrapper can
+    # sometimes return a list of content parts instead - handle both cases
+    if isinstance(response.content, list):
+        answer = "".join(
+            part if isinstance(part, str) else part.get("text", "")
+            for part in response.content
+        )
+    else:
+        answer = response.content
 
-    return response.text, chunks
+    # Combine sources for display - job chunks get a synthetic "source_file"
+    # label so the Streamlit app's existing source-display code keeps working
+    # without any changes needed there.
+    all_sources = list(note_chunks)
+    for job in job_chunks:
+        all_sources.append({"source_file": f"Job posting: {job['title']}"})
+
+    return answer, all_sources
 
 
 # quick test - only runs if you run THIS file directly
 if __name__ == "__main__":
+    import sys
+    sys.path.append(str(BASE_DIR))
+    from src.safety.guardrails import validate_question
+
     print("===== AI Career Mentor =====")
     print("Ask a career question (type 'quit' to stop)\n")
 

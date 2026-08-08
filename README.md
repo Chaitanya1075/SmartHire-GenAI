@@ -121,10 +121,12 @@ smarthire-genai/
   rate limits on the embedding API. This is a documented limitation (see
   evaluation report) - a larger index would likely improve match quality
   further, especially for less common resume fields.
-- **Career notes knowledge base:** covers 7 industries (IT, Finance, HR,
-  Sales, Healthcare, Engineering, Marketing/Digital Media), written
-  specifically for this project rather than scraped from external sources,
-  to keep the RAG mentor's grounding reliable and testable.
+- **AI Career Mentor grounding:** the mentor retrieves from two sources -
+  a career notes knowledge base (7 industries, written specifically for
+  this project) AND the live job postings index - so it can answer both
+  general career-guidance questions and questions about specific
+  available jobs. Generation is orchestrated with LangChain
+  (`ChatPromptTemplate` + `ChatGoogleGenerativeAI` via LCEL).
 - **Guardrails:** combine fast rule-based checks (keyword blocklist with
   word-boundary matching to avoid false positives, prompt-injection
   detection) with one LLM-based topic classifier call, plus a dedicated

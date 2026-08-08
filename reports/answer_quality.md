@@ -346,3 +346,40 @@ different, more responsible response after the fix - confirming Module 5's
 core requirement ("the portal must reject unsafe or off-topic input") is met,
 with an added layer of care for the self-harm category specifically.
 
+---
+
+## Update: RAG Pipeline Upgrade (LangChain + Job Corpus Grounding)
+
+After the evaluation above, two changes were made to the AI Career Mentor
+to more fully match the project spec's Module 4 description:
+
+1. **Job corpus grounding added.** The mentor now retrieves from both
+   `career_notes.index` and `jobs.index`, rather than career notes only.
+2. **Generation orchestrated with LangChain.** Direct Gemini API calls
+   were replaced with a LangChain `ChatPromptTemplate | ChatGoogleGenerativeAI`
+   chain (LCEL pattern).
+
+### Smoke Test After the Upgrade
+
+Five questions were re-tested to confirm core behavior held after this
+change - three testing new job-corpus grounding, two re-confirming
+guardrails were unaffected by the generation-layer change.
+
+| # | Question | Result | Judgment |
+|---|----------|--------|----------|
+| 1 | "What skills do I need as a financial analyst?" | Answered, grounded in finance.txt + 2 real job postings (FP&A Analyst, Accounts Analyst) | ✅ Correct - blends career notes and job corpus as intended |
+| 2 | "Are there any HR jobs available?" | Correctly listed 2 real HR postings by title and company (Manager of Human Resources, Human Resources Manager) | ✅ Correct - this question was previously unanswerable, since the mentor had no job-corpus access at all before this change |
+| 3 | "What Sales Representative jobs exist?" | Cited a specific real posting (Sales Representative at The Job Network) plus career-note context on SDR/AE terminology | ✅ Correct - combines both sources in one coherent answer |
+| 4 | "Who is prime minister?" | Refused | ✅ Correctly refused - guardrails unaffected by generation-layer change |
+| 5 | "hey hi" | Refused | ✅ Correctly refused |
+
+**Result: 5/5 correct.** This confirms the upgraded pipeline preserves all
+previously-validated behavior (grounding, refusal of off-topic/unsupported
+questions) while adding genuine new capability - the mentor can now answer
+questions about specific available jobs, which it could not do before.
+
+Note: this is a smaller, targeted smoke test rather than a full repeat of
+the original 18-question evaluation, since its purpose was to confirm the
+upgrade didn't regress previously-validated behavior, not to re-establish
+baseline metrics from scratch.
+
