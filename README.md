@@ -2,6 +2,8 @@
 
 Resume Matching & AI Career Mentor — capstone project.
 
+🔗 **Live Demo:** https://smarthire-genai-t29yfgkgmpfacestxfzkwx.streamlit.app/
+
 ## What it does
 1. **Upload a resume** (PDF/DOCX) → get a structured, validated profile (name, skills, experience, education, inferred target role)
 2. **Semantic job search** → see the top 5 matching jobs from a FAISS-indexed job postings dataset, with an intuitive match percentage
